@@ -6,9 +6,11 @@ using System.Windows.Markup;
 
 //Namespaces prefix
 [assembly: XmlnsPrefix("http://devpelux.github.io/wpfcoretools", "wct")]
+[assembly: XmlnsPrefix("http://devpelux.github.io/wpfcoretools/extensions", "wcte")]
 
 //Namespaces
 [assembly: XmlnsDefinition("http://devpelux.github.io/wpfcoretools", "WpfCoreTools")]
+[assembly: XmlnsDefinition("http://devpelux.github.io/wpfcoretools/extensions", "WpfCoreTools.Extensions")]
 
 //Theme
 [assembly: ThemeInfo(
