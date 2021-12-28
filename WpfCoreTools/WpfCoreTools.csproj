@@ -37,4 +37,8 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CoreTools" Version="1.0.1" />
+  </ItemGroup>
+
 </Project>

@@ -33,6 +33,23 @@
 
 ## Overview
 
+### GraphicUtils
+
+This static class contains the following functions:
+
+- `Point GetCursorPos()`  
+  Returns the current cursor position on display.
+
+### SystemUtils
+
+This static class contains the following functions:
+
+- `FileInfo GetExecutingFile()`  
+  Returns the current application executing file.
+
+- `DirectoryInfo GetExecutingDirectory()`  
+  Returns the current application executing directory.
+
 <!-- license -->
 
 ## License

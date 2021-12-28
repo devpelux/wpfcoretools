@@ -17,6 +17,23 @@ Lightweight package with some utilities for .NET Core wpf applications.
 
 ## Overview
 
+### GraphicUtils
+
+This static class contains the following functions:
+
+- `Point GetCursorPos()`  
+  Returns the current cursor position on display.
+
+### SystemUtils
+
+This static class contains the following functions:
+
+- `FileInfo GetExecutingFile()`  
+  Returns the current application executing file.
+
+- `DirectoryInfo GetExecutingDirectory()`  
+  Returns the current application executing directory.
+
 ## License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
