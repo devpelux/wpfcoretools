@@ -1,4 +1,6 @@
 ﻿using System.IO;
+using System.Linq;
+using System.Windows;
 
 namespace WpfCoreTools
 {
@@ -7,6 +9,12 @@ namespace WpfCoreTools
     /// </summary>
     public static class SystemUtils
     {
+        /// <summary>
+        /// Gets the current active window.
+        /// </summary>
+        /// <returns>Current active window.</returns>
+        public static Window? GetActiveWindow() => Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+
         /// <summary>
         /// Gets the current application executing file.
         /// </summary>
