@@ -8,7 +8,7 @@ namespace WpfCoreTools.Extensions
     public static class DependencyObjectExtensions
     {
         /// <summary>
-        /// Check if the <see cref="DependencyProperty"/> is <see langword="null"/>.
+        /// Checks if the <see cref="DependencyProperty"/> is <see langword="null"/>.
         /// </summary>
         /// <param name="dependencyObject"><see cref="DependencyObject"/> that contains the property.</param>
         /// <param name="dependencyProperty"><see cref="DependencyProperty"/> to check if is <see langword="null"/>.</param>
@@ -17,7 +17,7 @@ namespace WpfCoreTools.Extensions
             => dependencyObject.GetValue(dependencyProperty) == null;
 
         /// <summary>
-        /// Check if the <see cref="DependencyProperty"/> is not <see langword="null"/>.
+        /// Checks if the <see cref="DependencyProperty"/> is not <see langword="null"/>.
         /// </summary>
         /// <param name="dependencyObject"><see cref="DependencyObject"/> that contains the property.</param>
         /// <param name="dependencyProperty"><see cref="DependencyProperty"/> to check if is not <see langword="null"/>.</param>

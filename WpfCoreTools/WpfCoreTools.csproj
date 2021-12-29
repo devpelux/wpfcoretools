@@ -15,7 +15,7 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     <PackageProjectUrl>https://github.com/devpelux/wpfcoretools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devpelux/wpfcoretools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>net5 net6 core tools utility wpf</PackageTags>
+    <PackageTags>utility tools core dotnet net5 net6 wpf</PackageTags>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -38,7 +38,7 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreTools" Version="1.0.1" />
+    <PackageReference Include="CoreTools" Version="1.1.0" />
   </ItemGroup>
 
 </Project>

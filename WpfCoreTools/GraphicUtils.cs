@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfCoreTools.Extensions;
 
 namespace WpfCoreTools
 {
@@ -8,13 +9,9 @@ namespace WpfCoreTools
     public static class GraphicUtils
     {
         /// <summary>
-        /// Gets the current cursor position on display.
+        /// Returns the current cursor position on display.
         /// </summary>
         /// <returns>Current cursor position on display.</returns>
-        public static Point GetCursorPos()
-        {
-            System.Drawing.Point dpos = CoreTools.GraphicUtils.GetCursorPos();
-            return new Point(dpos.X, dpos.Y);
-        }
+        public static Point GetCursorPos() => CoreTools.GraphicUtils.GetCursorPos().ToMediaPoint();
     }
 }
