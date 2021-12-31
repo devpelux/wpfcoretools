@@ -12,7 +12,7 @@ namespace WpfCoreTools
         /// <summary>
         /// Returns the current active window.
         /// </summary>
-        /// <returns>Current active window.</returns>
+        /// <returns>Current active window, or <see langword="null"/> if there is no active window.</returns>
         public static Window? GetActiveWindow() => Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
 
         /// <summary>

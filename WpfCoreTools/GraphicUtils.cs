@@ -12,6 +12,6 @@ namespace WpfCoreTools
         /// Returns the current cursor position on display.
         /// </summary>
         /// <returns>Current cursor position on display.</returns>
-        public static Point GetCursorPos() => CoreTools.GraphicUtils.GetCursorPos().ToMediaPoint();
+        public static Point GetCursorPos() => CoreTools.GraphicUtils.GetCursorPos().ToWindowsPoint();
     }
 }

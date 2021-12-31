@@ -12,7 +12,7 @@ namespace WpfCoreTools.Extensions
         /// </summary>
         /// <param name="point"><see cref="System.Drawing.Point"/> to convert.</param>
         /// <returns><see cref="Point"/>.</returns>
-        public static Point ToMediaPoint(this System.Drawing.Point point)
+        public static Point ToWindowsPoint(this System.Drawing.Point point)
             => new(point.X, point.Y);
 
         /// <summary>

@@ -35,7 +35,7 @@ namespace WpfCoreTools.Extensions
         /// </summary>
         /// <param name="size"><see cref="System.Drawing.Size"/> to convert.</param>
         /// <returns><see cref="Size"/>.</returns>
-        public static Size ToMediaSize(this System.Drawing.Size size)
+        public static Size ToWindowsSize(this System.Drawing.Size size)
             => new(size.Width, size.Height);
 
         /// <summary>

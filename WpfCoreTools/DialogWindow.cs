@@ -26,7 +26,7 @@ namespace WpfCoreTools
         /// <summary>
         /// Displays the dialog and, in the end, return an <see cref="object"/> as result.
         /// </summary>
-        /// <returns>Result object.</returns>
+        /// <returns>Result as <see cref="object"/>.</returns>
         public object? Show()
         {
             _ = window.ShowDialog();
