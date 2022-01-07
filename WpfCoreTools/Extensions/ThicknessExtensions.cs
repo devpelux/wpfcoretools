@@ -29,5 +29,15 @@ namespace WpfCoreTools.Extensions
         /// <param name="thickness">Current <see cref="Thickness"/>.</param>
         /// <returns></returns>
         public static Thickness Invert(this Thickness thickness) => new(-thickness.Left, -thickness.Top, -thickness.Right, -thickness.Bottom);
+
+        /// <summary>
+        /// Collapses the <see cref="Thickness"/> into a <see cref="Size"/>.
+        /// </summary>
+        /// <param name="thickness"><see cref="Thickness"/> to collapse.</param>
+        /// <returns>
+        /// A <see cref="Size"/> whose <b>width</b> is the sum of <b>left and right</b> <see cref="Thickness"/> parameters,
+        /// and whose <b>height</b> is the sum of <b>top and bottom</b> <see cref="Thickness"/> parameters.
+        /// </returns>
+        public static Size Collapse(this Thickness thickness) => new(thickness.Left + thickness.Right, thickness.Top + thickness.Bottom);
     }
 }

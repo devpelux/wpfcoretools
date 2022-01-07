@@ -23,6 +23,7 @@ body:
       description: Select the releases affected.
       options:
         - Developing
+        - 1.1.0
         - 1.0.0
       multiple: true
     validations:

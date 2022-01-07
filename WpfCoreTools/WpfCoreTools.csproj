@@ -6,7 +6,7 @@
 	<UseWPF>true</UseWPF>
     <SignAssembly>False</SignAssembly>
     <Authors>Salvatore Peluso</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>Lightweight package with some utilities for .NET Core wpf applications.
@@ -15,11 +15,11 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     <PackageProjectUrl>https://github.com/devpelux/wpfcoretools</PackageProjectUrl>
     <RepositoryUrl>https://github.com/devpelux/wpfcoretools</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>utility tools core dotnet net5 net6 wpf</PackageTags>
+    <PackageTags>utility tools core dotnet wpf net5 net6</PackageTags>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>Added MathUtils, BoolValues, RectExtensions, added Collapse in ThicknessExtensions.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

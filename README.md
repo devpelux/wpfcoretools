@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.0.0/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Icon.png"></img>
 </p>
 <h2 align="center">WpfCoreTools</h2>
 <p align="center">Lightweight package with some utilities for .NET Core wpf applications.</p>
@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/wpfcoretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.0.0-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.1.0-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -90,7 +90,111 @@ Returns the current application executing file.
 - `DirectoryInfo GetExecutingDirectory()`  
 Returns the current application executing directory.
 
+### MathUtils
+
+This static class provides "fuzzy" comparison functionality for doubles and some common double-based classes and structs.  
+The class contains:
+
+Consts:
+
+- `double DOUBLE_EPSILON = 2.2204460492503131e-016`
+
+Functions:
+
+- `bool AreClose(double value1, double value2)`  
+Returns whether or not two **double** are close.
+
+  - `value1`: The first **double** to compare.
+  - `value2`: The first **double** to compare.
+
+- `bool LessThan(double value1, double value2)`  
+Returns whether or not the first **double** is less than the second **double**.
+
+  - `value1`: The first **double** to compare.
+  - `value2`: The first **double** to compare.
+
+- `bool GreaterThan(double value1, double value2)`  
+Returns whether or not the first **double** is greater than the second **double**.
+
+  - `value1`: The first **double** to compare.
+  - `value2`: The first **double** to compare.
+
+- `bool LessThanOrClose(double value1, double value2)`  
+Returns whether or not the first **double** is less than or close to the second **double**.
+
+  - `value1`: The first **double** to compare.
+  - `value2`: The first **double** to compare.
+
+- `bool GreaterThanOrClose(double value1, double value2)`  
+Returns whether or not the first **double** is greater than or close to the second **double**.
+
+  - `value1`: The first **double** to compare.
+  - `value2`: The first **double** to compare.
+
+- `bool IsOne(double value)`  
+Returns whether or not the **double** is close to 1.
+
+  - `value`: The **double** to compare to 1.
+
+- `bool IsZero(double value)`  
+Returns whether or not the **double** is close to 0.
+
+  - `value`: The **double** to compare to 0.
+
+- `bool IsBetweenZeroAndOne(double value)`  
+Returns whether or not the **double** is between 0 and 1.
+
+  - `value`: The **double** to check.
+
+- `bool AreClose(Point point1, Point point2)`  
+Compares two **Point** for fuzzy equality.
+
+  - `point1`: The first **Point** to compare.
+  - `point2`: The second **Point** to compare.
+
+- `bool AreClose(Size size1, Size size2)`  
+Compares two **Size** for fuzzy equality.
+
+  - `size1`: The first **Size** to compare.
+  - `size2`: The second **Size** to compare.
+
+- `bool AreClose(Vector vector1, Vector vector2)`  
+Compares two **Vector** for fuzzy equality.
+
+  - `vector1`: The first **Vector** to compare.
+  - `vector2`: The second **Vector** to compare.
+
+- `bool AreClose(Rect rect1, Rect rect2)`  
+Compares two **Rect** for fuzzy equality.
+
+  - `rect1`: The first **Rect** to compare.
+  - `rect2`: The second **Rect** to compare.
+
 ## Tools
+
+### BoolValues
+
+This class provides boxed values for **bool** values, and some functions to box and unbox **bool** values:
+
+Consts:
+
+- `object True = true`  
+Boxed value for **true**.
+
+- `object False = false`  
+Boxed value for **false**.
+
+Functions:
+
+- `object Box(bool value)`  
+Boxes a **bool** value.
+
+  - `value`: Value to box.
+
+- `bool Unbox(object value)`  
+Unboxes a **bool** value.
+
+  - `value`: Value to unbox.
 
 ### IDialog
 
@@ -160,15 +264,22 @@ Converts the **System.Windows.Media.Color** to a **System.Drawing.Color**.
 
 This static class provides a set of **DependencyObject** extensions:
 
-- bool IsNull(DependencyProperty dependencyProperty)  
+- `bool IsNull(DependencyProperty dependencyProperty)`  
 Checks if the **DependencyProperty** is **null**.
 
   - `dependencyProperty`: **DependencyProperty** to check if is **null**.
 
-- bool IsNotNull(DependencyProperty dependencyProperty)  
+- `bool IsNotNull(DependencyProperty dependencyProperty)`  
 Checks if the **DependencyProperty** is not **null**.
 
   - `dependencyProperty`: **DependencyProperty** to check if is not **null**.
+
+### StoryboardExtensions
+
+This static class provides a set of **Storyboard** extensions:
+
+- `Task BeginAsync()`  
+Applies the animations associated with this **Storyboard** to their targets and initiates them asyncronously.
 
 ### PointExtensions
 
@@ -208,13 +319,6 @@ Initializes a new **Size** with uniform dimensions.
 
   - `dim`: Dimensions.
 
-### StoryboardExtensions
-
-This static class provides a set of **Storyboard** extensions:
-
-- `Task BeginAsync()`  
-Applies the animations associated with this **Storyboard** to their targets and initiates them asyncronously.
-
 ### ThicknessExtensions
 
 This static class provides a set of **Thickness** extensions:
@@ -232,10 +336,30 @@ Subtracts a **Thickness** from the current **Thickness**.
 - `Thickness Invert()`  
 Inverts the **Thickness** by replacing every value with its negative.
 
+- `Size Collapse()`  
+Collapses the **Thickness** into a **Size**.
+
+### RectExtensions
+
+This static class provides a set of **Rect** extensions:
+
+- `bool HasNaN()`  
+Returns **true** if the **Rect** has one of his parameters setted to **NaN**.
+
+- `Rect Deflate(Thickness thickness)`  
+Deflates the **Rect** by subtracting a **Thickness**.
+
+  - `b`: **Thickness** to subtract from the **Rect**.
+
+- `Rect Inflate(Thickness thickness)`  
+Inflates the **Rect** by adding a **Thickness**.
+
+  - `b`: **Thickness** to add to the **Rect**.
+
 <!-- license -->
 
 ## License
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.0.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.0.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.1.0/LICENSE)
