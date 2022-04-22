@@ -14,7 +14,7 @@ Lightweight package with some utilities for .NET Core wpf applications.
 
 [![net5](https://img.shields.io/badge/.NET-v5.0-blue)](https://docs.microsoft.com/dotnet)
 [![net6](https://img.shields.io/badge/.NET-v6.0-blue)](https://docs.microsoft.com/dotnet)
-[![coretools](https://img.shields.io/badge/CoreTools-v1.1.0-blue)](https://www.nuget.org/packages/CoreTools)
+[![coretools](https://img.shields.io/badge/CoreTools-v1.1.1-blue)](https://www.nuget.org/packages/CoreTools)
 
 ## Overview
 
