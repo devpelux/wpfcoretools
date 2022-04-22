@@ -14,8 +14,20 @@ namespace WpfCoreTools.Extensions
         /// <param name='rect'>The <see cref="Rect"/> to check.</param>
         /// <returns>
         /// <see langword="true"/> if the <see cref="Rect"/> has one of his parameters setted to <see langword="NaN"/>,
-        /// otherwise <see langword="false"/>.</returns>        
+        /// otherwise <see langword="false"/>.
+        /// </returns>        
         public static bool HasNaN(this Rect rect) => double.IsNaN(rect.X) || double.IsNaN(rect.Y) || double.IsNaN(rect.Height) || double.IsNaN(rect.Width);
+
+        /// <summary>
+        /// Returns whether or not the <see cref="Rect"/> has an area greater than 0.
+        /// This is equal to check if <b>width</b> and <b>height</b> are greater than 0.
+        /// </summary>
+        /// <param name="rect">The <see cref="Rect"/> to check.</param>
+        /// <returns>
+        /// <see langword="true"/> if the <see cref="Rect"/> has an area greater than 0
+        /// (<b>width</b> and <b>height</b> are greater than 0), otherwise <see langword="false"/>.
+        /// </returns>
+        public static bool HasArea(this Rect rect) => !MathUtils.IsZero(rect.Width) && !MathUtils.IsZero(rect.Height);
 
         /// <summary>
         /// Deflates the <see cref="Rect"/> by subtracting a <see cref="Thickness"/>.

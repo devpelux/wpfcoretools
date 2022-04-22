@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.2.0/Assets/Icon.png"></img>
 </p>
 <h2 align="center">WpfCoreTools</h2>
 <p align="center">Lightweight package with some utilities for .NET Core wpf applications.</p>
@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/wpfcoretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.1.1-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.2.0-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -362,4 +362,4 @@ Inflates the **Rect** by adding a **Thickness**.
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.1.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.2.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.2.0/LICENSE)

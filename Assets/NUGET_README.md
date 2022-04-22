@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Icon.png)
+![icon](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.2.0/Assets/Icon.png)
 
 # WpfCoreTools
 
@@ -344,4 +344,4 @@ Inflates the **Rect** by adding a **Thickness**.
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.1.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.1.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.2.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.2.0/LICENSE)
