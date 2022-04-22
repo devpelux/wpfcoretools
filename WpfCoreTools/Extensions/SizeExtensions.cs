@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace WpfCoreTools.Extensions
 {
@@ -12,7 +13,10 @@ namespace WpfCoreTools.Extensions
         /// </summary>
         /// <param name="a">Current <see cref="Size"/>.</param>
         /// <param name="b"><see cref="Size"/> to sum to the current.</param>
-        /// <returns></returns>
+        /// <returns>
+        /// A new <see cref="Size"/> calculated by adding the specified one's <b>width</b> and <b>height</b>
+        /// from the current one's <b>width</b> and <b>height</b>.
+        /// </returns>
         public static Size Add(this Size a, Size b) => new(a.Width + b.Width, a.Height + b.Height);
 
         /// <summary>
@@ -20,15 +24,12 @@ namespace WpfCoreTools.Extensions
         /// </summary>
         /// <param name="a">Current <see cref="Size"/>.</param>
         /// <param name="b"><see cref="Size"/> to subtract from the current.</param>
-        /// <returns></returns>
-        public static Size Subtract(this Size a, Size b) => new(a.Width - b.Width, a.Height - b.Height);
-
-        /// <summary>
-        /// Inverts the <see cref="Size"/> by replacing every value with its negative.
-        /// </summary>
-        /// <param name="size">Current <see cref="Size"/>.</param>
-        /// <returns></returns>
-        public static Size Invert(this Size size) => new(-size.Width, -size.Height);
+        /// <returns>
+        /// A new <see cref="Size"/> calculated by subtracting the specified one's <b>width</b> and <b>height</b>
+        /// from the current one's <b>width</b> and <b>height</b>.
+        /// If a result value is negative, this value will be replaced with 0.
+        /// </returns>
+        public static Size Subtract(this Size a, Size b) => new(Math.Max(0.0, a.Width - b.Width), Math.Max(0.0, a.Height - b.Height));
 
         /// <summary>
         /// Converts the <see cref="System.Drawing.Size"/> to a <see cref="Size"/>.

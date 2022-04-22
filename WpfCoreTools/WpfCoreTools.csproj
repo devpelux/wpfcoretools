@@ -6,7 +6,7 @@
 	<UseWPF>true</UseWPF>
     <SignAssembly>False</SignAssembly>
     <Authors>Salvatore Peluso</Authors>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>Lightweight package with some utilities for .NET Core wpf applications.
@@ -19,7 +19,10 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReleaseNotes>Added MathUtils, BoolValues, RectExtensions, added Collapse in ThicknessExtensions.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed SizeExtensions.Subtract() allowing negative values and causing errors.
+Removed SizeExtensions.Invert() because Size doesn't allow negative values.
+Improved docs.
+Updated CoreTools to 1.1.1.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,7 +41,7 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreTools" Version="1.1.0" />
+    <PackageReference Include="CoreTools" Version="1.1.1" />
   </ItemGroup>
 
 </Project>
