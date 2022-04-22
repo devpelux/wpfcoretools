@@ -305,9 +305,6 @@ Subtracts a **Size** from the current **Size**.
 
   - `b`: **Size** to subtract from the current.
 
-- `Size Invert()`  
-Inverts the **Size** by replacing every value with its negative.
-
 - `System.Windows.Size ToWindowsSize()`  
 Converts the **System.Drawing.Size** to a **System.Windows.Size**.
 
@@ -345,6 +342,10 @@ This static class provides a set of **Rect** extensions:
 
 - `bool HasNaN()`  
 Returns **true** if the **Rect** has one of his parameters setted to **NaN**.
+
+- `bool HasArea()`  
+Returns whether or not the **Rect** has an area greater than 0.
+This is equal to check if **width** and **height** are greater than 0.
 
 - `Rect Deflate(Thickness thickness)`  
 Deflates the **Rect** by subtracting a **Thickness**.
