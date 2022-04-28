@@ -40,7 +40,7 @@ namespace WpfCoreTools.Extensions
         /// the <see cref="Thickness"/> <b>left</b>, and from the <b>y</b> by subtracting the <see cref="Thickness"/> <b>top</b>.
         /// </returns>
         /// <exception cref="InvalidOperationException"/>
-        public static void Inflate(this Rect rect, Thickness thickness)
+        public static void Inflate(this ref Rect rect, Thickness thickness)
         {
             if (rect.IsEmpty)
             {
