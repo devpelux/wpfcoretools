@@ -306,6 +306,9 @@ This is equal to check if **width** and **height** are greater than 0.
 Expands or shrinks the rectangle by using the specified **Thickness**.
 - `b`: **Thickness** to use to expand or shrink the **Rect**.
 
+### `Rect Clone()`
+Returns a new **Rect** instance equal to the original.
+
 
 
 <!-- license -->

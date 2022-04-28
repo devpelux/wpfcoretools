@@ -22,6 +22,7 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     <PackageReleaseNotes>
 		Merged RectExtensions.Deflate() into RectExtensions.Inflate().
 		Changed RectExtensions.Inflate() to return void, and change the current Rect, to match the standard Inflate methods.
+		Added RectExtensions.Clone().
 	</PackageReleaseNotes>
   </PropertyGroup>
 

@@ -64,5 +64,12 @@ namespace WpfCoreTools.Extensions
                 rect.Inflate(double.NegativeInfinity, double.NegativeInfinity);
             }
         }
+
+        /// <summary>
+        /// Returns a new <see cref="Rect"/> instance equal to the original.
+        /// </summary>
+        /// <param name="rect"><see cref="Rect"/> to clone.</param>
+        /// <returns>New <see cref="Rect"/> instance with the same parameters of the original.</returns>
+        public static Rect Clone(this Rect rect) => rect.IsEmpty ? Rect.Empty : new Rect(rect.X, rect.Y, rect.Width, rect.Height);
     }
 }
