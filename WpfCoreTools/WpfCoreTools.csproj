@@ -6,7 +6,7 @@
 	<UseWPF>true</UseWPF>
     <SignAssembly>False</SignAssembly>
     <Authors>Salvatore Peluso</Authors>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>Lightweight package with some utilities for .NET Core wpf applications.
@@ -19,7 +19,10 @@ Documentation here: https://github.com/devpelux/wpfcoretools</Description>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageReleaseNotes>Added RectExtensions.HasArea().</PackageReleaseNotes>
+    <PackageReleaseNotes>
+		Merged RectExtensions.Deflate() into RectExtensions.Inflate().
+		Changed RectExtensions.Inflate() to return void, and change the current Rect, to match the standard Inflate methods.
+	</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

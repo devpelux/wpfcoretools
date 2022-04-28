@@ -27,34 +27,42 @@ namespace WpfCoreTools.Extensions
         /// <see langword="true"/> if the <see cref="Rect"/> has an area greater than 0
         /// (<b>width</b> and <b>height</b> are greater than 0), otherwise <see langword="false"/>.
         /// </returns>
-        public static bool HasArea(this Rect rect) => !MathUtils.IsZero(rect.Width) && !MathUtils.IsZero(rect.Height);
+        public static bool HasArea(this Rect rect) => rect.Width > 0 && rect.Height > 0;
 
         /// <summary>
-        /// Deflates the <see cref="Rect"/> by subtracting a <see cref="Thickness"/>.
-        /// </summary>
-        /// <param name="rect"><see cref="Rect"/> to deflate.</param>
-        /// <param name="thickness"><see cref="Thickness"/> to subtract from the <see cref="Rect"/>.</param>
-        /// <returns>
-        /// The <see cref="Rect"/> shrunken in <b>width</b> and <b>height</b> by removing the <see cref="Thickness"/>
-        /// <b>top + bottom</b> and <b>left + right</b>, and moved forward from the <b>x</b> by adding
-        /// the <see cref="Thickness"/> <b>left</b>, and from the <b>y</b> by adding the <see cref="Thickness"/> <b>top</b>.
-        /// </returns>
-        public static Rect Deflate(this Rect rect, Thickness thickness)
-            => new(rect.Left + thickness.Left, rect.Top + thickness.Top,
-                   Math.Max(0.0, rect.Width - thickness.Left - thickness.Right), Math.Max(0.0, rect.Height - thickness.Top - thickness.Bottom));
-
-        /// <summary>
-        /// Inflates the <see cref="Rect"/> by adding a <see cref="Thickness"/>.
+        /// Expands or shrinks the rectangle by using the specified <see cref="Thickness"/>.
         /// </summary>
         /// <param name="rect"><see cref="Rect"/> to inflate.</param>
-        /// <param name="thickness"><see cref="Thickness"/> to add to the <see cref="Rect"/>.</param>
+        /// <param name="thickness"><see cref="Thickness"/> to use to expand or shrink the <see cref="Rect"/>.</param>
         /// <returns>
-        /// The <see cref="Rect"/> expanded in <b>width</b> and <b>height</b> by adding the <see cref="Thickness"/>
-        /// <b>top + bottom</b> and <b>left + right</b>, and moved backward from the <b>x</b> by subtracting
+        /// The <see cref="Rect"/> expanded or shrunken in <b>width</b> and <b>height</b> by adding the <see cref="Thickness"/>
+        /// <b>top</b> + <b>bottom</b> and <b>left</b> + <b>right</b>, and moved backward from the <b>x</b> by subtracting
         /// the <see cref="Thickness"/> <b>left</b>, and from the <b>y</b> by subtracting the <see cref="Thickness"/> <b>top</b>.
         /// </returns>
-        public static Rect Inflate(this Rect rect, Thickness thickness)
-            => new(Math.Max(0.0, rect.Left - thickness.Left), Math.Max(0.0, rect.Top - thickness.Top),
-                   rect.Width + thickness.Left + thickness.Right, rect.Height + thickness.Top + thickness.Bottom);
+        /// <exception cref="InvalidOperationException"/>
+        public static void Inflate(this Rect rect, Thickness thickness)
+        {
+            if (rect.IsEmpty)
+            {
+                throw new InvalidOperationException("Cannot inflate an empty Rect.");
+            }
+
+            double inflatedWidth = thickness.Left + thickness.Right;
+            double inflatedHeight = thickness.Top + thickness.Bottom;
+
+            //Checks if the resulting rect has a positive or zero area, then applies the inflation, otherwise the rect will become empty.
+            if (rect.Width + inflatedWidth >= 0 && rect.Height + inflatedHeight >= 0)
+            {
+                rect.Width += inflatedWidth;
+                rect.Height += inflatedHeight;
+                rect.X = Math.Max(0.0, rect.X - thickness.Left);
+                rect.Y = Math.Max(0.0, rect.Y - thickness.Top);
+            }
+            else
+            {
+                //Deflate the rect by an infinity width and height to make it empty.
+                rect.Inflate(double.NegativeInfinity, double.NegativeInfinity);
+            }
+        }
     }
 }
