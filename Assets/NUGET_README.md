@@ -1,4 +1,4 @@
-![icon](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.3.0/Assets/Icon.png)
+![icon](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.4.0/Assets/Icon.png)
 
 
 # WpfCoreTools
@@ -26,6 +26,11 @@ This static class contains the following functions:
 
 #### `Point GetCursorPos()`
 *Returns the current cursor position on display.*
+
+#### `BitmapImage LoadBitmapImageFromUri(string uri)`
+*Loads a BitmapImage from the specified uri string.*  
+Parameters:  
+**uri**: Uri string of the image to load.
 
 
 ## GDIUtils
@@ -167,6 +172,27 @@ Parameters:
 *Unboxes a bool value.*  
 Parameters:  
 **value**: Value to unbox.
+
+
+## DelegateCommand
+Defines a command with delegated Execute and CanExecute.
+
+#### `DelegateCommand(Action<object?> execute)`
+*Initializes a new instance of DelegateCommand that is always executable.*  
+Parameters:  
+**execute**: Action called when the command is invoked.
+
+#### `DelegateCommand(Action<object?> execute, Predicate<object?>? canExecute)`
+*Initializes a new instance of DelegateCommand specifying a predicate that determines if the command can be executed or not.*  
+Parameters:  
+**execute**: Action called when the command is invoked.  
+**canExecute**: Predicate called when it is to be determined whether the command can be executed or not.
+
+#### `Action<object?> ExecuteDelegate { get; }`
+*Gets the Execute delegate.*
+
+#### `Predicate<object?>? CanExecuteDelegate { get; }`
+*Gets the CanExecute delegate.*
 
 
 ## IDialog
@@ -325,4 +351,4 @@ Parameters:
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.3.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.3.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.4.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.4.0/LICENSE)
