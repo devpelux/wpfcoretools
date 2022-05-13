@@ -29,6 +29,7 @@ namespace WpfCoreTools
         /// Initializes a new instance of <see cref="DelegateCommand"/> that is always executable.
         /// </summary>
         /// <param name="execute"><see cref="Action{T}"/> called when the command is invoked.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public DelegateCommand(Action<object?> execute) : this(execute, null) { }
 
         /// <summary>
@@ -38,9 +39,10 @@ namespace WpfCoreTools
         /// <param name="execute"><see cref="Action{T}"/> called when the command is invoked.</param>
         /// <param name="canExecute"><see cref="Predicate{T}"/> called when
         /// it is to be determined whether the command can be executed or not.</param>
+        /// <exception cref="ArgumentNullException"></exception>
         public DelegateCommand(Action<object?> execute, Predicate<object?>? canExecute)
         {
-            ExecuteDelegate = execute;
+            ExecuteDelegate = execute ?? throw new ArgumentNullException(nameof(execute));
             CanExecuteDelegate = canExecute;
         }
 
