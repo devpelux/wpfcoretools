@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0-windows; net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows; net5.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
 	<UseWPF>true</UseWPF>
     <SignAssembly>False</SignAssembly>
-    <Authors>Salvatore Peluso</Authors>
+    <Authors>devpelux</Authors>
     <Version>1.4.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
