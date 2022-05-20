@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
+using System.Runtime.Versioning;
 using System.Windows;
 using System.Windows.Media;
-using System.Runtime.Versioning;
 using System.Windows.Media.Imaging;
 
 namespace WpfCoreToolsTest

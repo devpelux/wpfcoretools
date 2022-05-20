@@ -3,12 +3,11 @@
     /// <summary>
     /// Defines an object that can return a result.
     /// </summary>
-    public interface IDialog
+    public interface IDialog<T>
     {
         /// <summary>
-        /// Gets the result as <see cref="object"/>.
+        /// Gets the result.
         /// </summary>
-        /// <returns>Result as <see cref="object"/>.</returns>
-        public object? GetResult();
+        public T? GetResult();
     }
 }

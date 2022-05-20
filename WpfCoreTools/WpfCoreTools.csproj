@@ -6,7 +6,7 @@
 	<UseWPF>true</UseWPF>
     <SignAssembly>False</SignAssembly>
     <Authors>devpelux</Authors>
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Copyright>Copyright (C) 2021-2022 devpelux (Salvatore Peluso)</Copyright>
     <Description>
@@ -22,8 +22,8 @@ Documentation: https://github.com/devpelux/wpfcoretools
     <PackageReadmeFile>NUGET_README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReleaseNotes>
-		Added DelegateCommand.
-		Added GraphicUtils.LoadBitmapImageFromUri().
+		Reimplemented DialogWindow and IDialog with generics instead of objects, avoiding boxing and unboxing values.
+		Updated CoreTools to 1.2.0.
 	</PackageReleaseNotes>
   </PropertyGroup>
 
@@ -43,7 +43,7 @@ Documentation: https://github.com/devpelux/wpfcoretools
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CoreTools" Version="1.1.1.1" />
+    <PackageReference Include="CoreTools" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

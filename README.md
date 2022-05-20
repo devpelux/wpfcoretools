@@ -1,7 +1,7 @@
 <!-- icon -->
 
 <p align="center">
-  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.4.0/Assets/Icon.png"></img>
+  <img width="90px" align="center" src="https://raw.githubusercontent.com/devpelux/wpfcoretools/1.5.0/Assets/Icon.svg"></img>
 </p>
 <h1 align="center">WpfCoreTools</h1>
 <p align="center">Lightweight package with some utilities for .NET Core wpf applications.</p>
@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/github/license/devpelux/wpfcoretools"></img>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/code:release-v1.4.0-blue"></img>
+  <img src="https://img.shields.io/badge/code:release-v1.5.0-blue"></img>
   <img src="https://img.shields.io/badge/code:status-stable-blue"></img>
 </p>
 
@@ -30,7 +30,7 @@
 # Dependencies
 [![net5](https://img.shields.io/badge/.NET-v5.0-blue)](https://docs.microsoft.com/dotnet)
 [![net6](https://img.shields.io/badge/.NET-v6.0-blue)](https://docs.microsoft.com/dotnet)
-[![coretools](https://img.shields.io/badge/CoreTools-v1.1.1-blue)](https://www.nuget.org/packages/CoreTools)
+[![coretools](https://img.shields.io/badge/CoreTools-v1.2.0-blue)](https://www.nuget.org/packages/CoreTools)
 
 
 # Content
@@ -214,20 +214,20 @@ Parameters:
 ## IDialog
 This interface defines an object that can return a result, and contains the following functions:
 
-#### `object? GetResult()`
-*Gets the result as object.*
+#### `T? GetResult()`
+*Gets the result.*
 
 
 ## DialogWindow
-This class is a decorator that incapsulates a Window to be displayed as dialog and, in the end, return an object as result.
+This class is a decorator that incapsulates a Window to be displayed as dialog and, in the end, returns a result.
 
 #### `DialogWindow(Window window)`
 *Initializes a new instance of DialogWindow.*  
 Parameters:  
-**window**: The Window to handle.
+**window**: The Window to be shown as dialog.
 
-#### `object? Show()`
-*Displays the dialog and, in the end, return an object as result.*
+#### `T? Show()`
+*Displays the dialog and, in the end, returns a result.*
 
 
 ## ClipConverter
@@ -369,4 +369,4 @@ Parameters:
 Copyright (C) 2021-2022 devpelux (Salvatore Peluso)  
 Licensed under MIT license.
 
-[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.4.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.4.0/LICENSE)
+[![mit](https://raw.githubusercontent.com/devpelux/wpfcoretools/1.5.0/Assets/Mit.png)](https://github.com/devpelux/wpfcoretools/blob/1.5.0/LICENSE)
